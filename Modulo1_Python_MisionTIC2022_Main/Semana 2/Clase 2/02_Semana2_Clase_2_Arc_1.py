@@ -1,3 +1,5 @@
+# Accedr a los caracteres de uno en uno en la cadena
+
 #Ejercicio 1
 fruta = 'fresa'
 letra = fruta[1]
@@ -6,6 +8,8 @@ print(letra)
 fruta = 'banana'
 letra = fruta[0]
 print(letra)
+
+# Conseguir la longitud de una cadena
 
 #Ejercicio 2
 fruta = 'banana'
@@ -16,6 +20,8 @@ fruta = 'banana'
 longitud = len(fruta)
 ultimo = fruta[longitud - 1]
 print(ultimo)
+
+# Rebanadas de una cadena
 
 #Ejercicio 4
 s = 'Monty Python'
@@ -31,10 +37,14 @@ print(fruta[3:])
 fruta = 'banana'
 print(fruta[3:3])
 
+# Inmutabilidad de una cadena - Solo es posible crear una nueva cadena
+
 #Ejercicio 7
 saludo = '¡Hola, mundo!'
 nuevo_saludo = 'J' + saludo[1:]
 print(nuevo_saludo)
+
+# Operador in, devuelve respuesta booleana si una cadena se encuentra dentro de otra cadena
 
 #Ejercicio 8
 var1 = 'a'
@@ -44,6 +54,8 @@ print(var1 in var2)
 var1 = 'ola'
 var2 = 'banana'
 print(var1 in var2)
+
+# Comparación de cadenas
 
 #Ejercicio 9
 palabra = 'banana'
@@ -61,15 +73,21 @@ elif palabra2 > 'banana':
 else:
     print('Está bien, su palabra es banana')
 
+# Conseguir el tipo de datos de una variable y los métodos asociados a ese tipo de variable
+
 #Ejercicio 11
 Cadena = 'Hola mundo'
 print(type(Cadena))
 print(dir(Cadena))
 
+# Convertir cadena en mayúsculas
+
 #Ejercicio 12
 palabra = 'banana'
 palabra_nueva = palabra.upper()
 print(palabra_nueva)
+
+# Retornar la posición de una subcadena dentro de una cadena
 
 #Ejercicio 13
 palabra = 'banana'
@@ -86,10 +104,14 @@ print(palabra.find('na'))
 palabra = 'banana'
 print(palabra.find('na', 3))
 
+# Retirar espacios en blanco a los extremos de una cadena
+
 #Ejercicio 16
 
 linea = '    Aquí vamos    '
 print(linea.strip())
+
+#Conseguir una subcadena dentro de otra al inicio
 
 #Ejercicio 17
 
@@ -103,6 +125,8 @@ linea = 'Que Tengas Un Buen Día'
 print(linea.startswith('t'))
 print(linea.lower().startswith('q'))
 print(linea.lower()) #que tengas un buen día
+
+# Ejercicios 
 
 #Ejercicio 19
 
