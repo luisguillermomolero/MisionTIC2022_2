@@ -1,5 +1,5 @@
-    # Condicionales
-    
+# Condicionales
+
 """
     Se sugieren las siguientes formas de clasificarlos condicionales:
         Decisiones simples
@@ -71,7 +71,7 @@
 
 # Try y Except
 
-#Ejemplo 1: División con divisor igual a cero
+# Ejemplo 1: División con divisor igual a cero
 
 dividendo = 10
 divisor = 0
@@ -79,10 +79,10 @@ try:
     cociente = dividendo / divisor
     print(cociente)
 except:
-    print ("No se permite la división por cero")
+    print("No se permite la división por cero")
 
 
-#Ejemplo 2: Conversión de Fahrenheit a celcius
+# Ejemplo 2: Conversión de Fahrenheit a celcius
 
 temperatura_fahr = input('Introduzca una temperatura en Fahrenheit:')
 try:
@@ -93,7 +93,7 @@ except:
     print('No ingreso ningún número, gracias')
 
 
-#Ejemplo 3: Valor diferente a un número introducido por teclado
+# Ejemplo 3: Valor diferente a un número introducido por teclado
 
 while True:
     try:
@@ -108,11 +108,10 @@ a = 25
 b = 'dasdas'
 try:
     resultado = a/b
-    print('El resultado de ', a, ' entre ', b,' es: ', round(resultado,2))
+    print('El resultado de ', a, ' entre ', b, ' es: ', round(resultado, 2))
 except ZeroDivisionError:
     print("Error, division por cero.")
 except TypeError:
     print("Error en el tipo de dato.")
 finally:
     print("Gracias por usar el programa.")
-
