@@ -59,13 +59,13 @@
     
     Tabla de verdad:
     
-            and                             or                  not
-    false and false = false     false and false = false     Argumento   not argumento
-    false and true  = false     false and true  = true      False       true
-    true  and false = false     true  and false = true      true        false
-    true  and true  = true      true  and true  = true
+            and                          or                         not
+    false and false = false     false or false = false     Argumento   not argumento
+    false and true  = false     false or true  = true      False       true
+    true  and false = false     true  or false = true      true        false
+    true  and true  = true      true  or true  = true
     
-    Ejercicio página 19, 24, 25, 27, 30, 31, 34, 
+    Ejercicio página 19, 24, 25, 27, 30, 31, 34
     
 """
 
