@@ -65,7 +65,9 @@ Diccionario = dict({'uno': 1, 'dos': 2, 'tres': 3})
 
 print(Diccionario)
 
-# Iterable que contiene iterables con dos elementos
+# Iterable que contiene iterables con dos elementos (lista de tuplas)
+# Los valores de una «tupla» se guardan entre () «inmutables»
+# Los valores de una «lista» se guardan entre [] «mutables»
 
 Diccionario = dict(
     [('uno', 'Luis Molero'), ('dos', True), ('tres', 3.321654987)])
@@ -119,7 +121,6 @@ diccionario['usuario'] = 'eduardo'
 print(diccionario['usuario'])
 diccionario['usuario'] = 'Carlos'
 print(diccionario['usuario'])
-
 diccionario['usuario'] = 'Luis'
 print(diccionario['usuario'])
 diccionario['usuario'] = 'Molero'
@@ -219,6 +220,121 @@ diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
 
 print(diccionario['zope'])
 
+
+# Encapsulamiento con Diccionario
+
+def promedioNotas2(dicNotas):
+    sumatoria = 0
+    sumatoria += dicNotas['Nota1']
+    sumatoria += dicNotas['Nota2']
+    sumatoria += dicNotas['Nota3']
+    sumatoria += dicNotas['Nota4']
+    promedio = round(sumatoria / 4, 2)
+    return promedio
+
+dicNotas = {}
+dicNotas ['Nota1'] = 3.0
+dicNotas ['Nota2'] = 2.1
+dicNotas ['Nota3'] = 5.0
+dicNotas ['Nota4'] = 4.7
+print('El promedio es de: ', promedioNotas2(dicNotas))
+
+#Ejemplo 3
+
+# Encapsulamiento con Diccionario - Otra notación
+
+def promedioNotas3(dicNotas):
+    sumatoria = 0
+    sumatoria += dicNotas['Nota1']
+    sumatoria += dicNotas['Nota2']
+    sumatoria += dicNotas['Nota3']
+    sumatoria += dicNotas['Nota4']
+    promedio = round(sumatoria / 4, 2)
+    return promedio
+
+dicNotas = {
+    'Nota1' : 3.0,
+    'Nota2' : 2.1,
+    'Nota3' : 5.0,
+    'Nota4' : 4.7
+}
+
+print('El promedio es de: ', promedioNotas3(dicNotas))
+
+#Ejemplo 4
+
+#Paso entre funciones
+
+def reportePromedio(dicReporte):
+    return dicReporte['estudiante'] + ' = ' + str(dicReporte['promedio'])
+
+def generarReporteNotas(dicNotas):
+    sumatoria = 0
+    sumatoria += dicNotas['Nota1']
+    sumatoria += dicNotas['Nota2']
+    sumatoria += dicNotas['Nota3']
+    sumatoria += dicNotas['Nota4']
+    promedio = round(sumatoria/4, 2)
+    reporteNotas = {
+        'promedio':promedio,
+        'estudiante':dicNotas['estudiante']
+    }
+    return reporteNotas
+
+dicNotas = {
+    'estudiante': 'Beneficiario Rodriguez',
+    'Nota1' : 3.0,
+    'Nota2' : 2.1,
+    'Nota3' : 5.0,
+    'Nota4' : 4.7
+}
+
+print(reportePromedio(generarReporteNotas(dicNotas)))
+
+
+# Ejercicio tipo Reto
+
+def datosPersonales (Ficha:dict)-> dict:
+    
+    uCe  = Ficha['Cedula']
+    uNom = Ficha['Nombre']
+    uApe = Ficha['Apellido']
+    uCor = Ficha['Correo']
+    
+    # Condición de fealdad
+
+    if uCe <= 500000:
+        condicion = 'Feo'
+    else:
+        condicion = 'Buena persona'        
+
+
+    dicSalida =  {
+        'Cedula': uCe,
+        'Condicion': condicion
+    }
+    
+    return dicSalida
+
+Ficha = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
+
+print(datosPersonales(Ficha))
+
+Ficha = {
+    'Cedula': 10200300,
+    'Nombre': 'Calos',
+    'Apellido': 'Perdomo',
+    'Correo': 'batequebrado@yahoo.es'
+}
+
+print(datosPersonales(Ficha))
+
+
 # Ejemplo 10
 
 """
@@ -226,25 +342,37 @@ clear()
 Este método remueve todos los elementos desde el diccionario.
 """
 
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
 print(diccionario)
-
 diccionario.clear()
 print(diccionario)
 
 # Ejemplo 11
+
 """
 copy()
 Este método devuelve una copia superficial del tipo diccionario
 """
 
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
 print('Variable versiones     ', diccionario)
 
 nuevaVersion = diccionario.copy()
 print('Variable otro_versiones', nuevaVersion)
 
+
 # Ejemplo 12
+
 """
 fromkeys()
 Este método crea un nuevo diccionario con claves a partir de un tipo 
@@ -255,36 +383,53 @@ lista = ('python', 'zope', 'plone')
 versiones = dict.fromkeys(lista)
 print("Nuevo Diccionario : %s" % str(versiones))
 
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
+versiones = dict.fromkeys(diccionario)
+print("Nuevo Diccionario : %s" % str(versiones))
+
 """
 En el ejemplo anterior inicializa los valores de cada clave a 
 None, mas puede inicializar un valor común por defecto para cada clave:
 """
 
-versiones = dict.fromkeys(lista, 0.1)
+versiones = dict.fromkeys(diccionario, 0.1)
 print("Nuevo Diccionario : %s" % str(versiones))
 
 # Ejemplo 13
 
 """
 get()
-Este método devuelve el valor en base a una coincidencia de búsqueda en
-un diccionario mediante una clave, de lo contrario devuelve el objeto None.
+Devuelve el valor de una clava solicitada. Sino la encuentra devuelve None
 """
 
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
-print(diccionario.get('plone'))
-print(diccionario.get('python'))
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
+print(diccionario.get('Cedula'))
+print(diccionario.get('Correo'))
 
 
 # Ejemplo 14
 
 """
 items()
-Este método devuelve una lista de pares de diccionarios (clave, valor), 
-como 2 tuplas 
+Devuelve una lista de pares de diccionarios (clave, valor), como una lista de tuplas
 """
 
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
 
 print(diccionario.items())
 
@@ -292,243 +437,210 @@ print(diccionario.items())
 
 """
 pop()
-Este método remueve específicamente una clave de diccionario y 
-devuelve valor correspondiente. Lanza una excepción KeyError si 
-la clave no es encontrada.
+Remueve específicamente una clave de diccionario y devuelve valor correspondiente. 
+Lanza una excepción KeyError si la clave no es encontrada.
 """
 
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
+diccionario = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
 print('Version original ', diccionario)
 
-versiones.pop('zope')
+versiones = diccionario.pop('Cedula')
+print('Nueva version    ', diccionario)
+
+# En este caso no existe la clave Telefono
+versiones = diccionario.pop('Telefono')
 print('Nueva version    ', diccionario)
 
 # Ejemplo 16
 
 """
 update()
-Este método actualiza un diccionario agregando los pares clave-valores
-en un segundo diccionario. Este método no devuelve nada.
+Actualiza un diccionario agregando nuevos pares clave-valores en un segundo diccionario. 
+Si se llama a update() sin pasar parámetros, el diccionario permanece sin cambios.
 
-El método update() toma un diccionario o un objeto iterable de pares 
-clave/valor (generalmente tuplas). Si se llama a update() sin pasar 
-parámetros, el diccionario permanece sin cambios.
+Este método no devuelve nada.
 """
 
-diccionarioOriginal = dict(python=2.7, zope=2.13, plone='+57 326.214.5698')
-print('Diccionario Original                ', diccionarioOriginal)
+diccionarioOriginal = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
+print('\nDiccionario Original ', diccionarioOriginal)
 
-nuevoDiccionario = dict(django=2.1)
-print('Nuevo Diccionario - complemento     ', nuevoDiccionario)
+#nuevoDiccionario = dict(telefono = +012546935456)
+nuevoDiccionario =({'Telfono': 12546935456})
+
+print('\nNuevo Diccionario - complemento ', nuevoDiccionario)
 
 diccionarioOriginal.update(nuevoDiccionario)
-print('Diccionario Actualizado             ', diccionarioOriginal)
+print('\nDiccionario Actualizado ', diccionarioOriginal)
+
 
 # Ejercicio 17
+Usuario_1 = {
+    'Cedula': 102000,
+    'Nombre': 'Luis',
+    'Apellido': 'Molero',
+    'Correo': 'elsabroso@gmail.com'
+}
 
-print('======================\n')
+Usuario_2 = {
+    'Cedula2': 235487,
+    'Nombre2': 'Carlos',
+    'Apellido2': 'Perez',
+    'Correo2': 'mondongo@gmail.com'
+}
 
-producto_1 = dict(id=123, marca='Apple', procesador='M1',
-                  memoria='(8Gb', pantalla='13"')
+print('Producto 1:      \n', Usuario_1)
+print('Producto 2:      \n', Usuario_2)
 
-producto_2 = dict(id2=124, marca2='Samsung',
-                  procesador2='Intel core i7', memoria2='(16Gb', pantalla2='14"')
+Usuario_1.update(Usuario_2)
 
-print('Producto 1:      ', producto_1)
-print()
-print('Producto 2:      ', producto_2)
-print()
+print('Usuarios actualizados:      \n', Usuario_1)
+print('\n')
 
-producto_1.update(producto_2)
+for k in Usuario_1.keys():
+    print(f'{k} = {Usuario_1[k]}')
 
-print('Stock:           ', producto_1)
-
-print('\n======================')
 
 # Ejercicio 18
-
 
 datos = {
     'nombre': 'Andres',
     'apellido': 'Pizarro',
-    'cc': '9862000',
-    'email': 'andres.pizarro@hotmail.com',
-    'telefono': 3135555555,
-    'direccion': 'calle 98',
-    'ciudad': 'Pereira',
-    'departamento': 'Risaralda',
-    'pais': 'Colombia'}
+    'cc': '9862000'
+    }
 
-print(f'Numero de datos: {len(datos)}')
+print(f'\nNumero de datos: {len(datos)}\n')
 
-i: int = 1
 for k in datos.keys():
-    print(f'Dato_{i}...{k}={datos[k]}')
-    i += 1
+    print(f'{k} = {datos[k]}')
 
-print('\n')
-
-print(f'Agregamos Información Adicional:')
-
+#Agregamos 2 nuevos datos y actualizamos el registro
 datos_add = {
     'cuenta_ahorros': 270819629,
-    'banco': 'Bancolombia',
-    'Recibe_Transferencias': True,
     'Saldo': 100000000000
 }
 
 datos.update(datos_add)
 
-print('\n')
+print(f'\nAgregamos Información Adicional: Nuevo Numero de Datos: {len(datos)}\n')
 
-print(f'Nuevo Numero de Datos: {len(datos)}')
-
-i = 1
-for k, v in datos.items():
-    print(f'Dato_{i}...{k}={v}')
-    i += 1
+for k in datos.keys():
+    print(f'{k} = {datos[k]}')
 
 
 # Ejemplo 19
 
-"""
-Funciones
-Los objetos de tipo diccionario tienen disponibles una serie de funciones
-integradas en el interprete Python para su tratamiento, a continuación 
-algunas de estas:
+#Funciones integradas en los diccionarios
 
+"""
 len()
 Esta función devuelve un valor entero con el número de claves de un
 diccinario especificado en su parametro.
 """
 
-diccionarioOriginal = dict(python=2.7, zope=2.13, plone='+57 326.214.5698')
+Datos = {
+    'nombre': 'Andres',
+    'apellido': 'Pizarro',
+    'cc': '9862000'
+}
 
-print(len(diccionarioOriginal))
+print(len(Datos))
 
 # Ejemplo 20
 
 """
 El método keys() y sorted()
-El método retorna o regresa una lista de todas las claves dentro del diccionario.
-Al tener una lista de claves se puede acceder a todo el diccionario de una manera 
-fácil y útil.
+Retorna una lista de todas las claves dentro del diccionario.
 """
 
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
-
-for key in sorted(dict.keys()):
+Datos = {
+    'Nombre': 'Andres',
+    'Apellido': 'Pizarro',
+    'CC': '9862000'
+}
+print('\n')
+for key in sorted(Datos.keys()):
     print(key, "->", dict[key])
 
 # Ejercicio 21
 
-print('======================')
-print()
-
-animales = {'gato': 'chat', 'perro': 'chien',
-            'caballo': 'cheval', 'gallina': 'chaki', 'raton': 'choin'}
+animales = {
+    'Nombre_gato': 'chat', 
+    'Nombre_perro': 'chien',
+    'Nombre_caballo': 'cheval',
+    'Nombre_gallina': 'chaki',
+    'Nombre_raton': 'choin'
+}
 
 for i in sorted(animales.keys()):
     print(f'{i}: {animales[i]}')
-
-print()
-print('======================')
-
-print('======================')
-print()
-
-
-animales = {'gato': 'chat', 'perro': 'chien',
-            'caballo': 'cheval', 'gallina': 'chaki', 'raton': 'choin'}
-
-for i in sorted(animales.keys()):
-    print(f'{i}:', animales[i])
-
-print()
-print('======================')
-
-# Ejercicio 22
-
-animals = {
-    'chicken': 'pio',
-    'vaca': 'mu',
-    'perro': 'guau',
-    'gato': 'miau',
-    'loro': 'quiere cacao'
-}
-
-for (animal, sonido) in animals.items():
-    print(f'El {animal} dice {sonido}')
 
 # Ejercicio 23
 
 """
 Métodos item()
-Este método regresa una lista de tuplas donde cada tupla es un par de cada clave 
-con su valor.
+Retorna una lista de tuplas donde cada tupla es un par de cada clave/valor.
 """
 
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
+dict = {
+    "Gato": "chat", 
+    "Perro": "chien", 
+    "Caballo": "cheval"
+}
 
 for spanish, french in dict.items():
     print(spanish, "->", french)
-
 
 # Ejercicio 24
 
 """
 Sentencias
-Los objetos de tipo diccionario tienen disponibles una serie de sentencias 
-integradas en el interprete Python para su tratamiento, a continuación 
-algunas de estas:
+Los diccionario tienen disponibles sentencias integradas en Python para su tratamiento
 
-del
-Esta sentencia es la misma sentencia integrada del en el interprete Python 
-pero aplicada al uso de la secuencia de tipo diccionario.
+del: 
 """
-
-diccionario = dict(python=2.7, zope=2.13, plone='+57 326.214.5698', django=2.1)
-print('Version original                ', diccionarioOriginal)
-
-del diccionarioOriginal['django']
-print('Luego de borrar la clave django ', diccionarioOriginal)
 
 # Ejercicio 25
 
-# Tenemos el los siguientes diccionarios
+# Comparando los nombres de los estudiantes
 
 Informacion = {
     'Alumno1': {'nombre': 'Daniel', 'edad': 11, 'estatura': 1.75, 'grado': 'Master'},
     'Alumno2': {'nombre': 'David', 'edad': 32, 'estatura': 1.85, 'grado': 'Doctor'}
 }
 
-print(Informacion)
+print('\n',Informacion,'\n')
 
-# Comparemos los nombres de los estudiantes
+# Comparado los Nombres de cada alumno
 
 if Informacion['Alumno1']['nombre'] == Informacion['Alumno2']['nombre']:
-    print("Los nombres son iguales")
+    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es igual a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 else:
-    print('Los nombres son diferentes')
+    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es diferente a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 
-# Miremos quien es mayor
+# Comparado la edad de cada alumno 
 
 if Informacion['Alumno1']['edad'] > Informacion['Alumno2']['edad']:
-    print(str(Informacion['Alumno1']['nombre']) + ' es mayor')
-    mayor = {'nombremayor': Informacion['Alumno1']['nombre'],
-             'edadmayor': Informacion['Alumno1']['edad']}
-
-elif Informacion['Alumno1']['edad'] < Informacion['Alumno2']['edad']:
-    print(str(Informacion['Alumno1']['nombre']) + ' es menor')
-    mayor = {'nombremayor': Informacion['Alumno2']['nombre'],
-             'edadmayor': Informacion['Alumno2']['edad']}
-
-print(mayor)
-
+    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es mayor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
+else:
+    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es menor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 
 # Ejercicio 26
 
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
+dict = {"gato": "chat", 
+        "perro": "chien", 
+        "caballo": "cheval"
+}
+
 words = ['gato', 'leon', 'caballo']
 
 for word in words:
@@ -541,32 +653,28 @@ for word in words:
 
 """
 Agregando nuevas claves
-El agregar una nueva clave con su valor a un diccionario es tan simple como cambiar un valor. 
-Solo se tiene que asignar un valor a una nueva clave que no haya existido antes.
 """
 
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
+Animales = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
 
-dict['cisne'] = 'cygne'
-print(dict)
+Animales['cisne'] = 'cygne'
+print('\n',Animales)
 
 # También es posible insertar un elemento al diccionario utilizando el método update()
 
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
+Animales = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
 
-dict.update({"pato": "canard"})
-print(dict)
+Animales.update({"pato": "canard"})
+print('\n',Animales)
 
 # Ejemplo 28
 
 """
 Eliminado claves
-Al eliminar la clave también se removerá el valor asociado. Los valores no pueden 
-existir sin sus claves. Esto se logra con la instrucción del.
 """
-dict = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
-print('Diccionario original ', dict)
+Animales = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
+print('\nDiccionario original ', Animales)
 
-del dict['perro']
+del Animales['perro']
 
-print('Nuevo diccionario    ', dict)
+print('\nNuevo diccionario    ', Animales)

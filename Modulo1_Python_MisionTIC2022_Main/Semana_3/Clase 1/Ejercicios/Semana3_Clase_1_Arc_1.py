@@ -1,41 +1,36 @@
-#Ejercicio 1
+# Ejercicio 1
 
-x = 0
-x = x + 1
-x += 1
-print(x)
-
-#Ejercicio 2
-
-y = 10
-y = y-1
-y -= 9
-
-print(y) #imprimir y
-
-#Ejercicio 3
+while True:
+    Numero = int(input('Ingrese un número: '))
+    if Numero % 2 == 0:
+        print('El número es par')
+        break
+    else:
+        print('El número es par')
+        break
+    
+# Ejercicio 2
 
 n = int(input('Por favor, ingrese un número mayor que cero '))
+while n > 0:
+    print(n)
+    print('Listo!')
+    break
+    
+    
+#Ejercicio 2
 
+n = int(input('Por favor, ingrese un número mayor que cero '))
 while n > 0:
     print(n)
     n = n - 1
 print('Despegue!')
 
-#Ejercicio 4
-def factorial(n: int) -> int:
-    resultado = 1
-    numero_actual = 2
-    while numero_actual <= n:
-        resultado = resultado * numero_actual
-        numero_actual += 1
-    return resultado
 
 #Ejercicio 5
 #Alejarse de terminación
 
 i = 1
-
 while i > 0:
     print(i)
     i += 1
@@ -43,10 +38,8 @@ print("Terminé")
 
 #Ejercicio 6
 #Brincarse la meta
-# le toca oprimir el boton de pausa sino el sigue dandole
 
 i = 0
-
 while i != 10:
     print(i)
     i += 2
@@ -64,6 +57,7 @@ print("Terminé") #aqui tambien le toca hacer lo mismo
 
 #Ejercicio 8
 #Olvidar el avance
+
 i = 1
 while i < 10:
     print(i)
@@ -80,7 +74,6 @@ while i < 6:
 #Ejercicio 10
 
 i = 0
-
 while i < 6:
   i += 1
   if i == 3:
@@ -204,8 +197,9 @@ while variable > 0:
         continue
     print('Actual valor de variable:', variable) # no imprime el 5
 
-#Ejercicio 20
-#Ciclo For
+# Ejercicio 20
+# Ciclo For
+# range(start, stop, step)
 
 for x in range(0, 4):
     print("Estamos en la iteración " + str(x))
@@ -247,9 +241,18 @@ cantidad_datos = datos_basicos.items()
 for clave, valor in cantidad_datos:
     print(clave + ": " + valor)
 
+#for k in datos_basicos.keys():
+#    print(f'{k} = {datos_basicos[k]}')
+
 #Ejercicio 25
 # Bucle 'for' con Diccionarios
-frutas = {'Fresa':'roja', 'Limon':'verde', 'Papaya':'naranja', 'Manzana':'amarilla', 'Guayaba':'rosa'}
+frutas = {
+    'Fresa':'roja', 
+    'Limon':'verde', 
+    'Papaya':'naranja', 
+    'Manzana':'amarilla', 
+    'Guayaba':'rosa'
+}
 for nombre, color in frutas.items():
     print(nombre, "es de color", color)
 
@@ -257,7 +260,12 @@ for nombre, color in frutas.items():
 #Ejercicio 26
 #Ejemplo dos con diccionarios
 
-frutas = {'Fresa':'roja', 'Limon':'verde', 'Papaya':'naranja', 'Manzana':'amarilla', 'Guayaba':'rosa'}
+frutas = {'Fresa':'roja', 
+          'Limon':'verde', 
+          'Papaya':'naranja', 
+          'Manzana':'amarilla', 
+          'Guayaba':'rosa'
+}
 for llave in frutas:
     print(llave, 'es de color', frutas[llave])
 
@@ -266,24 +274,20 @@ for llave in frutas:
 #Bucle 'for' con 'else'
 
 """
-La cláusula else se ejecuta después de que el ciclo se completa normalmente. 
-Esto significa que el bucle no encontró una declaración de interrupción. 
-Son realmente útiles una vez que sabes dónde usarlos.
-La construcción común es ejecutar un bucle y buscar un elemento. Si se encuentra
-el elemento, salimos del ciclo usando la declaración break. Hay dos escenarios en
-los que el ciclo puede terminar. El primero es cuando se encuentra el artículo y 
-se produce una rotura. El segundo escenario es que el ciclo termina sin encontrar 
-una declaración de interrupción. 
+La cláusula "else" se ejecuta después de que el ciclo se completa normalmente lo que significa que el bucle no encontró una declaración de interrupción. 
+
+La construcción común es ejecutar un bucle y buscar un elemento. Si se encuentra el elemento, salimos del ciclo usando la declaración break. 
+
+Hay dos escenarios en los que el ciclo puede terminar. 
+    * Cuando se encuentra el artículo y se produce una rotura. 
+    * El segundo escenario es que el ciclo termina sin encontrar una declaración de interrupción. 
 """
-
-#range(start, stop, step)
-
 
 """
 Números primos
-Número natural mayor que 1 que tiene únicamente dos divisores positivos distintos: 
- *** él mismo y la unidad (1).
+Número natural mayor que 1 que tiene únicamente dos divisores positivos distintos: él mismo y la unidad (1).
 """
+# Ejercicio
 
 for n in range(2, 10):
     for x in range(2, n):
@@ -294,19 +298,7 @@ for n in range(2, 10):
         # bucle falló sin encontrar un factor
         print(n, 'es un número primo')
 
-#Ejemplo 28
-
-db_connection = "127.0.0.1","5432","root","nomina"
-
-for parametro in db_connection:
-    print(parametro)
-else:
-    print("""El comando PostgreSQL es: 
-$ psql -h {server} -p {port} -U {user} -d {db_name}""".format(
-        server=db_connection[0], port=db_connection[1], 
-        user=db_connection[2], db_name=db_connection[3]))
-
-#Ejemplo 29
+# Ejercicio
 
 for x in range(6):
       print(x)
