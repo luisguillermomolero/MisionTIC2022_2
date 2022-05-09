@@ -173,11 +173,19 @@ for k in datos.keys():
 
 # Ejercicio 7
 
-print('======================')
-print()
-
-datos = dict(id='87689s87d6', nombre='Mauricio', apellido='Posada', email='maopos@micorreo.com', telefono=78576588765,
-             github='@maopos', instagram='@maoposites', direccion='calle 5 carrera 20b', ciudad='cali', departamento='Valle', pais='Colombia')
+datos = dict(
+    id='87689s87d6',
+    nombre='Mauricio',
+    apellido='Posada',
+    email='maopos@micorreo.com',
+    telefono=78576588765,
+    github='@maopos',
+    instagram='@maoposites',
+    direccion='calle 5 carrera 20b',
+    ciudad='cali',
+    departamento='Valle',
+    pais='Colombia'
+)
 
 print('Cantidad de datos: ', len(datos))
 print(datos)
@@ -186,10 +194,6 @@ print(datos.keys())
 print()
 print(datos.values())
 print()
-
-
-print()
-print('======================')
 
 # Ejemplo 8
 
@@ -232,16 +236,18 @@ def promedioNotas2(dicNotas):
     promedio = round(sumatoria / 4, 2)
     return promedio
 
+
 dicNotas = {}
-dicNotas ['Nota1'] = 3.0
-dicNotas ['Nota2'] = 2.1
-dicNotas ['Nota3'] = 5.0
-dicNotas ['Nota4'] = 4.7
+dicNotas['Nota1'] = 3.0
+dicNotas['Nota2'] = 2.1
+dicNotas['Nota3'] = 5.0
+dicNotas['Nota4'] = 4.7
 print('El promedio es de: ', promedioNotas2(dicNotas))
 
-#Ejemplo 3
+# Ejemplo 3
 
 # Encapsulamiento con Diccionario - Otra notación
+
 
 def promedioNotas3(dicNotas):
     sumatoria = 0
@@ -252,21 +258,24 @@ def promedioNotas3(dicNotas):
     promedio = round(sumatoria / 4, 2)
     return promedio
 
+
 dicNotas = {
-    'Nota1' : 3.0,
-    'Nota2' : 2.1,
-    'Nota3' : 5.0,
-    'Nota4' : 4.7
+    'Nota1': 3.0,
+    'Nota2': 2.1,
+    'Nota3': 5.0,
+    'Nota4': 4.7
 }
 
 print('El promedio es de: ', promedioNotas3(dicNotas))
 
-#Ejemplo 4
+# Ejemplo 4
 
-#Paso entre funciones
+# Paso entre funciones
+
 
 def reportePromedio(dicReporte):
     return dicReporte['estudiante'] + ' = ' + str(dicReporte['promedio'])
+
 
 def generarReporteNotas(dicNotas):
     sumatoria = 0
@@ -276,17 +285,18 @@ def generarReporteNotas(dicNotas):
     sumatoria += dicNotas['Nota4']
     promedio = round(sumatoria/4, 2)
     reporteNotas = {
-        'promedio':promedio,
-        'estudiante':dicNotas['estudiante']
+        'promedio': promedio,
+        'estudiante': dicNotas['estudiante']
     }
     return reporteNotas
 
+
 dicNotas = {
     'estudiante': 'Beneficiario Rodriguez',
-    'Nota1' : 3.0,
-    'Nota2' : 2.1,
-    'Nota3' : 5.0,
-    'Nota4' : 4.7
+    'Nota1': 3.0,
+    'Nota2': 2.1,
+    'Nota3': 5.0,
+    'Nota4': 4.7
 }
 
 print(reportePromedio(generarReporteNotas(dicNotas)))
@@ -294,27 +304,27 @@ print(reportePromedio(generarReporteNotas(dicNotas)))
 
 # Ejercicio tipo Reto
 
-def datosPersonales (Ficha:dict)-> dict:
-    
-    uCe  = Ficha['Cedula']
+def datosPersonales(Ficha: dict) -> dict:
+
+    uCe = Ficha['Cedula']
     uNom = Ficha['Nombre']
     uApe = Ficha['Apellido']
     uCor = Ficha['Correo']
-    
+
     # Condición de fealdad
 
     if uCe <= 500000:
         condicion = 'Feo'
     else:
-        condicion = 'Buena persona'        
+        condicion = 'Buena persona'
 
-
-    dicSalida =  {
+    dicSalida = {
         'Cedula': uCe,
         'Condicion': condicion
     }
-    
+
     return dicSalida
+
 
 Ficha = {
     'Cedula': 102000,
@@ -382,6 +392,8 @@ de dato secuencia. El valor de value por defecto es el tipo None.
 lista = ('python', 'zope', 'plone')
 versiones = dict.fromkeys(lista)
 print("Nuevo Diccionario : %s" % str(versiones))
+
+# Ejercicio
 
 diccionario = {
     'Cedula': 102000,
@@ -474,8 +486,8 @@ diccionarioOriginal = {
 }
 print('\nDiccionario Original ', diccionarioOriginal)
 
-#nuevoDiccionario = dict(telefono = +012546935456)
-nuevoDiccionario =({'Telfono': 12546935456})
+# nuevoDiccionario = dict(telefono = +012546935456)
+nuevoDiccionario = ({'Telfono': 12546935456})
 
 print('\nNuevo Diccionario - complemento ', nuevoDiccionario)
 
@@ -516,14 +528,14 @@ datos = {
     'nombre': 'Andres',
     'apellido': 'Pizarro',
     'cc': '9862000'
-    }
+}
 
 print(f'\nNumero de datos: {len(datos)}\n')
 
 for k in datos.keys():
     print(f'{k} = {datos[k]}')
 
-#Agregamos 2 nuevos datos y actualizamos el registro
+# Agregamos 2 nuevos datos y actualizamos el registro
 datos_add = {
     'cuenta_ahorros': 270819629,
     'Saldo': 100000000000
@@ -531,7 +543,8 @@ datos_add = {
 
 datos.update(datos_add)
 
-print(f'\nAgregamos Información Adicional: Nuevo Numero de Datos: {len(datos)}\n')
+print(
+    f'\nAgregamos Información Adicional: Nuevo Numero de Datos: {len(datos)}\n')
 
 for k in datos.keys():
     print(f'{k} = {datos[k]}')
@@ -539,7 +552,7 @@ for k in datos.keys():
 
 # Ejemplo 19
 
-#Funciones integradas en los diccionarios
+# Funciones integradas en los diccionarios
 
 """
 len()
@@ -574,7 +587,7 @@ for key in sorted(Datos.keys()):
 # Ejercicio 21
 
 animales = {
-    'Nombre_gato': 'chat', 
+    'Nombre_gato': 'chat',
     'Nombre_perro': 'chien',
     'Nombre_caballo': 'cheval',
     'Nombre_gallina': 'chaki',
@@ -592,8 +605,8 @@ Retorna una lista de tuplas donde cada tupla es un par de cada clave/valor.
 """
 
 dict = {
-    "Gato": "chat", 
-    "Perro": "chien", 
+    "Gato": "chat",
+    "Perro": "chien",
     "Caballo": "cheval"
 }
 
@@ -618,28 +631,32 @@ Informacion = {
     'Alumno2': {'nombre': 'David', 'edad': 32, 'estatura': 1.85, 'grado': 'Doctor'}
 }
 
-print('\n',Informacion,'\n')
+print('\n', Informacion, '\n')
 
 # Comparado los Nombres de cada alumno
 
 if Informacion['Alumno1']['nombre'] == Informacion['Alumno2']['nombre']:
-    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es igual a ' + str(Informacion['Alumno2']['nombre']) + '\n')
+    print('\n' + str(Informacion['Alumno1']['nombre']) +
+          ' es igual a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 else:
-    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es diferente a ' + str(Informacion['Alumno2']['nombre']) + '\n')
+    print('\n' + str(Informacion['Alumno1']['nombre']) +
+          ' es diferente a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 
-# Comparado la edad de cada alumno 
+# Comparado la edad de cada alumno
 
 if Informacion['Alumno1']['edad'] > Informacion['Alumno2']['edad']:
-    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es mayor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
+    print('\n' + str(Informacion['Alumno1']['nombre']) +
+          ' es mayor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 else:
-    print('\n' + str(Informacion['Alumno1']['nombre']) + ' es menor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
+    print('\n' + str(Informacion['Alumno1']['nombre']) +
+          ' es menor a ' + str(Informacion['Alumno2']['nombre']) + '\n')
 
 # Ejercicio 26
 
-dict = {"gato": "chat", 
-        "perro": "chien", 
+dict = {"gato": "chat",
+        "perro": "chien",
         "caballo": "cheval"
-}
+        }
 
 words = ['gato', 'leon', 'caballo']
 
@@ -658,14 +675,14 @@ Agregando nuevas claves
 Animales = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
 
 Animales['cisne'] = 'cygne'
-print('\n',Animales)
+print('\n', Animales)
 
 # También es posible insertar un elemento al diccionario utilizando el método update()
 
 Animales = {"gato": "chat", "perro": "chien", "caballo": "cheval"}
 
 Animales.update({"pato": "canard"})
-print('\n',Animales)
+print('\n', Animales)
 
 # Ejemplo 28
 
