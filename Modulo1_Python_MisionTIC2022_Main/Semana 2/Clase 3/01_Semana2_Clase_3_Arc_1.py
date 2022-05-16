@@ -582,7 +582,7 @@ Datos = {
 }
 print('\n')
 for key in sorted(Datos.keys()):
-    print(key, "->", dict[key])
+    print(key, ":", Datos[key])
 
 # Ejercicio 21
 
@@ -619,7 +619,6 @@ for spanish, french in dict.items():
 Sentencias
 Los diccionario tienen disponibles sentencias integradas en Python para su tratamiento
 
-del: 
 """
 
 # Ejercicio 25
