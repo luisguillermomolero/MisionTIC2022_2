@@ -8,10 +8,12 @@ class Empleado:
         # Atributo, propiedad o caracteristica de la Clase "Empleado"
         self.sueldo = float(input("Ingrese el sueldo:"))
 
+    # getter
     def imprimir(self):  # Comportamiento, funcionalidad, método
         print("Nombre:", self.nombre)
         print("Sueldo:", self.sueldo)
 
+    # setter
     def paga_impuestos(self):  # Comportamiento, funcionalidad, método
         if self.sueldo > 3000:
             print("Debe pagar impuestos")
