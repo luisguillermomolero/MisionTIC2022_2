@@ -12,8 +12,7 @@ class Obrero(Persona):
         self.__especialista = 1
 
     def mensaje(self):
-        print(
-            f"mensaje desde la clase Obrero. Especialidad {self.__especialista}")
+        print(f"mensaje desde la clase Obrero. Especialidad {self.__especialista}")
 
 
 nuevaPersona = Persona()

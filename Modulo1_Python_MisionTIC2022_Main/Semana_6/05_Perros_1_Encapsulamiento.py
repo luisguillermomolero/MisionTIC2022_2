@@ -4,14 +4,18 @@ class Perros(object):  # Declaramos la clase principal Perros
         self.__nombre = nombre  # Declaramos los atributos (privados ocultos)
         self.__peso = peso
 
-    # intercepta la escritura, lectura o borrado de los atributos y permite incorporar documentación sobre los mismos.
+    # modifica el comportamiento del método para que se comporte como una propiedad
     @property
     # getter
-    def nombre(self):  # Definimos el método para obtener el nombre
+    def nombre(self):  # clave self para acceder al atributo __nombre
         "Documentación del método nombre"  # Doc del método
         return self.__nombre  # Aquí simplemente estamos retornando el atributo privado oculto
-# Hasta aquí definimos los métodos para obtener los atributos ocultos o privados getter.
-# Ahora vamos a utilizar setter y deleter para modificarlos
+    # Hasta aquí definimos los métodos para obtener los atributos ocultos o privados getter.
+    # Ahora vamos a utilizar setter y deleter para modificarlos
+
+    # getter
+    def peso(self):  # Definimos el método para obtener el peso
+        return self.__peso  # Aquí simplemente estamos retornando el atributo privado
 
     @nombre.setter  # Propiedad SETTER
     def nombre(self, nuevo):
@@ -25,10 +29,6 @@ class Perros(object):  # Declaramos la clase principal Perros
     def nombre(self):
         print("Borrando nombre..")
         del self.__nombre
-
-        # getter
-    def peso(self):  # Definimos el método para obtener el peso
-        return self.__peso  # Aquí simplemente estamos retornando el atributo privado
 
 
 # Instanciamos
