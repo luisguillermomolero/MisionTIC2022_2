@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class App {
 
+    private static void NombreEdad(String nombre, int edad) {
+        System.out.println("Hola " + nombre + " tu edad es " + edad + " correcto?");
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -13,9 +17,5 @@ public class App {
         System.out.println("Ingrese su edad: ");
         int edad = sc.nextInt();
         NombreEdad(nombre, edad);
-    }
-
-    private static void NombreEdad(String nombre, int edad) {
-        System.out.println("Hola " + nombre + " tu edad es " + edad + " correcto?");
     }
 }

@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class App {
 
+    private static void Suma(int numero1, int numero2) {
+        /* int sumatoria = numero1 + numero2; */
+        System.out.println("El resultado de la suma es:" + (numero1 + numero2));
+    }
+
+    private static void Resta(int numero1, int numero2) {
+        System.out.println("El resultado de la suma es:" + (numero1 - numero2));
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -16,14 +25,4 @@ public class App {
         Resta(numero1, numero2);
         sc.close();
     }
-
-    private static void Suma(int numero1, int numero2) {
-        /* int sumatoria = numero1 + numero2; */
-        System.out.println("El resultado de la suma es:" + (numero1 + numero2));
-    }
-
-    private static void Resta(int numero1, int numero2) {
-        System.out.println("El resultado de la suma es:" + (numero1 - numero2));
-    }
-
 }
