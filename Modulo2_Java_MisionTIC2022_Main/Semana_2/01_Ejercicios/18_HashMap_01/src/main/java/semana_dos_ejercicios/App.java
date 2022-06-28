@@ -5,23 +5,28 @@ package semana_dos_ejercicios;
 import java.util.*;
 
 public class App {
-    public static void main(String[] args) {
-  
-      HashMap<Integer, String> m = new HashMap<>();
-  
-      m.put(924, "Amalia Núñez");
-      m.put(921, "Cindy Nero");
-      m.put(700, "César Vázquez");
-      m.put(219, "Víctor Tilla");
-      m.put(537, "Alan Brito");
-      m.put(605, "Esteban Quito ");
-  
-      System.out.println("Todas las entradas del diccionario extraídas con entrySet:");
-      System.out.println(m.entrySet());
-  
-      System.out.println("\nEntradas del diccionario extraídas una a una:");
-      for (Map.Entry pareja: m.entrySet()) {
-        System.out.println(pareja);
-      }    
+
+  public App() {
+    HashMap<Integer, String> Diccionario = new HashMap<>();
+
+    Diccionario.put(924, "Amalia Núñez");
+    Diccionario.put(921, "Cindy Nero");
+    Diccionario.put(700, "César Vázquez");
+    Diccionario.put(219, "Víctor Tilla");
+    Diccionario.put(537, "Alan Brito");
+    Diccionario.put(605, "Esteban Quito ");
+
+    System.out.println("\nTodas las entradas del diccionario extraídas con entrySet:");
+    System.out.println(Diccionario.entrySet());
+
+    System.out.println("\nEntradas del diccionario extraídas una a una:");
+
+    for (int key : Diccionario.keySet()) {
+      System.out.println("Llave: " + key + " Valor: " + Diccionario.get(key));
     }
   }
+
+  public static void main(String[] args) {
+    new App();
+  }
+}

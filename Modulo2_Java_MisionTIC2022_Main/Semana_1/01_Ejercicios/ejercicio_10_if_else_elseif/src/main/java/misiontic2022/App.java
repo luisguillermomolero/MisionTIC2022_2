@@ -2,17 +2,6 @@ package misiontic2022;
 
 public class App {
 
-    public static void Main(String[] args) {
-
-        String cad1 = "castillo";
-        String cad2 = "casTillo";
-
-        System.out.println(SonIguales(cad1, cad2));
-        IgualesIgnorandoMayusculas(cad1, cad2);
-        SonIgualesCompare(cad1, cad2);
-        SonIgualesIgnorandoMayusculas(cad1, cad2);
-    }
-
     private static String SonIguales(String cad1, String cad2) {
         if (cad1.equals(cad2)) {
             return "El método equals dice que cad1 es igual a cad2";
@@ -51,5 +40,16 @@ public class App {
             System.out.println(
                     "El método compareToIgnoreCase dice que cad1 y cad2 no son iguales. cad1 es mayor alfabeticamente");
         }
+    }
+
+    public static void Main(String[] args) {
+
+        String cad1 = "castillo";
+        String cad2 = "casTillo";
+
+        System.out.println(SonIguales(cad1, cad2));
+        IgualesIgnorandoMayusculas(cad1, cad2);
+        SonIgualesCompare(cad1, cad2);
+        SonIgualesIgnorandoMayusculas(cad1, cad2);
     }
 }

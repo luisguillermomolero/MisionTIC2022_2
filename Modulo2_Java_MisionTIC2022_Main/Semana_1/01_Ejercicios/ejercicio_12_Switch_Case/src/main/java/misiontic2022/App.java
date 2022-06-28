@@ -4,16 +4,6 @@ import java.util.Scanner;
 
 public class App {
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Introduzca número de mes: ");
-        int mes = sc.nextInt();
-        Mes(mes);
-        sc.close();
-    }
-
     private static void Mes(int mes) {
         if (mes < 1 || mes > 12) // se comprueba que el valor del mes es correcto
             System.out.println("Mes incorrecto");
@@ -64,5 +54,15 @@ public class App {
             else
                 System.out.println(" es un mes de 31 días");
         }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduzca número de mes: ");
+        int mes = sc.nextInt();
+        Mes(mes);
+        sc.close();
     }
 }
