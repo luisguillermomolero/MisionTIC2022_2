@@ -1,22 +1,44 @@
 package semana_dos_ejercicios;
 
-public class Test {
-    int Numero1;
-    int Numero2;
+class Test {
+    private int Numero1;
+    private int Numero2;
 
     // Constructor parametrizado
-    public Test(int Numero1, int Numero2) {
-        this.Numero1 = Numero1;
-        this.Numero2 = Numero2;
+
+    public Test() {
+
     }
 
-    void Mostrar() {
-        // Visualización del valor de las variables a y b
-        System.out.println("a = " + Numero1 + "  b = " + Numero2);
+    public Test(int Numero1Registrado, int Numero2Registrado) {
+        this.Numero1 = Numero1Registrado;
+        this.Numero2 = Numero2Registrado;
     }
+
+    public int getNumero1() {
+        return Numero1;
+    }
+
+    public int getNumero2() {
+        return Numero2;
+    }
+
+    // métodos
+
+    void MostrarRegistro() {
+        System.out.println("El número 1 es: " + getNumero1() + " y el número 2 es: " + getNumero2());
+    }
+}
+
+public final class App {
 
     public static void main(String[] args) {
+        // instancia de la clase Test
         Test object = new Test(10, 20);
-        object.Mostrar();
+        // llamada al método mostrar registro
+        object.MostrarRegistro();
+
+        // uso del getter para mostrar el objeto
+        System.out.println("El número 1 es: " + object.getNumero1() + " y el número 2 es: " + object.getNumero2());
     }
 }
