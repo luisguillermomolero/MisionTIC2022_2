@@ -10,7 +10,6 @@ public class EjemploThis {
 
     public EjemploThis(Integer dato) {
         this.setDato(dato);
-
     }
 
     // setter
