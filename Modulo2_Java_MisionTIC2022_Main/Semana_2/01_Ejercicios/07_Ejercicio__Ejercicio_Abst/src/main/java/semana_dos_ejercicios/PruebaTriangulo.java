@@ -2,17 +2,15 @@ package semana_dos_ejercicios;
 
 import java.util.Scanner;
 
-public class PruebaTriangulo
-{
-    //Método principal de java
-    public static void main(String[] args)
-    {
-        //Declaración de variables
+public class PruebaTriangulo {
+    // Método principal de java
+    public static void main(String[] args) {
+        // Declaración de variables
         String colorDelTriangulo;
         double baseDelTriangulo;
         double alturaDelTriangulo;
 
-        //Se instancia a la variable "Scanner"
+        // Se instancia a la variable "Scanner"
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Introduzca el color del triángulo: ");

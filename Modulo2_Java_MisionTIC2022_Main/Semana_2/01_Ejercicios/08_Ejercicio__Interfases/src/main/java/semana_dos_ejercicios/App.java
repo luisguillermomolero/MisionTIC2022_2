@@ -1,6 +1,6 @@
 package semana_dos_ejercicios;
 
-class SeriesDemo {
+class App {
     public static void main(String[] args) {
         DeDos ob = new DeDos();
 

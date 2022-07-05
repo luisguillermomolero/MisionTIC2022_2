@@ -1,6 +1,8 @@
 package semana_dos_ejercicios;
 
 public class Persona {
+    
+    // atributos
     private String nombre;
     private int edad;
 

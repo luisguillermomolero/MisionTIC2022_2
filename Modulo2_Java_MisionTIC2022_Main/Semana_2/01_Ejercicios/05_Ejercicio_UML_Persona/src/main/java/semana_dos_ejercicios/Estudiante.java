@@ -2,6 +2,7 @@ package semana_dos_ejercicios;
 
 public class Estudiante extends Persona {
 
+    // atributos
     private String carrera;
     private int legajo;
 

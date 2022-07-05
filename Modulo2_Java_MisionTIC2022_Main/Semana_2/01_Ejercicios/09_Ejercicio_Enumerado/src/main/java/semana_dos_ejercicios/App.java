@@ -1,11 +1,11 @@
 package semana_dos_ejercicios;
 
 //Una enumeración de transporte
-enum Transporte{
+enum Transporte {
     COCHE, CAMION, AVION, TREN, BARCO;
 }
 
-class Enumerados {
+class App {
     public static void main(String[] args) {
         Transporte tp;
         // tp=Transporte.AVION;
@@ -13,14 +13,14 @@ class Enumerados {
         // System.out.println("Valor de tp: "+tp +"\n");
         // System.out.println();
 
-        tp=Transporte.TREN;
+        tp = Transporte.BARCO;
 
-        //Comparación de 2 valores enum
+        // Comparación de 2 valores enum
         // if (tp==Transporte.CAMION)
-        //     System.out.println("tp tiene el valor de TREN\n");
+        // System.out.println("tp tiene el valor de TREN\n");
 
-        //enum para controlar sentencia switch
-        switch(tp){
+        // enum para controlar sentencia switch
+        switch (tp) {
             case COCHE:
                 System.out.println("Un auto lleva personas.");
                 break;
@@ -32,7 +32,7 @@ class Enumerados {
                 break;
             case TREN:
                 System.out.println("Un tren corre sobre rieles.");
-                 break;
+                break;
             case BARCO:
                 System.out.println("Un barco navega en el agua.");
                 break;

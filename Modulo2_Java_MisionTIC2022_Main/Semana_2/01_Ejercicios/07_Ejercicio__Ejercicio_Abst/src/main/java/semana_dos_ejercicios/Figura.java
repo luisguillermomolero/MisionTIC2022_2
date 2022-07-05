@@ -37,6 +37,8 @@ package semana_dos_ejercicios;
  */
 
 public abstract class Figura {
+
+    // atributos
     private String color;
 
     // Constructor: define atributo "color" con un "this" haciendo las veces de
@@ -45,11 +47,12 @@ public abstract class Figura {
         this.color = color;
     }
 
-    // Método vacio para ser implementado desde las clases hijas.
-    public abstract double calcularArea();
-
     // getter, para acceder al color
     public String getColor() {
         return color;
     }
+
+    // Método vacio para ser implementado desde las clases hijas.
+    public abstract double calcularArea();
+
 }

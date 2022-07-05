@@ -17,10 +17,13 @@ public class App {
     Diccionario.put(605, "Esteban Quito ");
 
     System.out.println("\nTodas las entradas del diccionario extraídas con entrySet:");
+
+    // entrySet():retorna una vista del mapa como un conjunto de parejas clave-valor
     System.out.println(Diccionario.entrySet());
 
     System.out.println("\nEntradas del diccionario extraídas una a una:");
 
+    // iterar un mapa
     for (int key : Diccionario.keySet()) {
       System.out.println("Llave: " + key + " Valor: " + Diccionario.get(key));
     }
