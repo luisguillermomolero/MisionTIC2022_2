@@ -1,6 +1,6 @@
 package semana_dos_ejercicios;
 
-import java.util.*;
+import java.util.Scanner;
 
 public final class MiPrimeraClase {
 
