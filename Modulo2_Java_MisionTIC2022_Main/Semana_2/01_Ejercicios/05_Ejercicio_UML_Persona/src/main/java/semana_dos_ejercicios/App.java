@@ -19,12 +19,14 @@ public class App {
         // creamos un objeto "estudiante" a partir de sus 2 atributos "Carrera" y
         // "Legajo" heredando el atributo "nombre" de "Persona"
         estudiante.setNombre("Carlos Alfonso Roncancio Pardo");
+        estudiante.setEdad(21);
         estudiante.setCarrera("Ingeniería de sistemas");
         estudiante.setLegajo(22);
 
         // creamos un objeto "profesor" a partir de sus 2 atributos "materia" y
         // "cargo" heredando el atributo "nombre" de "Persona"
         profesor.setNombre("Manuel Pepe Grillo");
+        profesor.setEdad(46);
         profesor.setMateria("Arquitectura del computador");
         profesor.setCargo("Docente Títular III");
 

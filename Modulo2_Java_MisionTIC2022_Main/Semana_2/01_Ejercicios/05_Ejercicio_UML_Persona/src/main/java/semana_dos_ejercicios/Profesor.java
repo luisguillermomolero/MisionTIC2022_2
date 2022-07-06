@@ -2,6 +2,7 @@ package semana_dos_ejercicios;
 
 public class Profesor extends Persona {
 
+    // atributos
     private String materia;
     private String cargo;
 

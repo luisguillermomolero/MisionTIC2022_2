@@ -3,7 +3,7 @@ package semana_dos_ejercicios;
 //JOptionPane:Clase que permite mostrar dialogos gráficos. Permite introducir/mostrar información y se encuentra en el paquete javax.swing.
 import javax.swing.JOptionPane;
 
-public class EjercicioVector1 {
+public class Vector {
 
   public static void main(String[] args) {
 

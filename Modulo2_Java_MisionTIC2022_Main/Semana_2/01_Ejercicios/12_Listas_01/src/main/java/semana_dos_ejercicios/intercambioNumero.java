@@ -1,4 +1,4 @@
-//Realizar un programa que lea tantos números enteros como desee el usuario y los introduzca en una lista. Muestre la lista e intercambie los números que se encuentren en la 2ª y 4ª posición, y muestre de nuevo la lista por consola. Utilice al menos 3 métodos: uno para introducir los datos, otro para mostrar los datos y otro para intercambiar los datos.
+//Realizar un programa que lea tantos números enteros como desee el usuario y los introduzca en una lista. Muestre la lista e intercambie los números que se encuentren en la 2ª y 4ª posición, y muestre de nuevo la lista por consola. Utilice al menos 3 métodos: uno para introducir los datos y otro para mostrar los datos.
 
 package semana_dos_ejercicios;
 

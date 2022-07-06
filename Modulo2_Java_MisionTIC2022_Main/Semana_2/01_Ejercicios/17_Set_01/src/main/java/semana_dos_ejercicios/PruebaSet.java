@@ -10,9 +10,11 @@ import java.util.Collection;
 
 public class PruebaSet {
 
-    private String colores[] = { "rojo", "blanco", "azul", "verde", "rojo", "blanco", "azul", "verde" };
+    // definimos nuestro arreglo
+    private String colores[] = { "rojo", "blanco", "azul", "Amarillo", "rojo", "blanco", "azul", "verde" };
 
     public PruebaSet() {
+        // me convierte de un arreglo a un serializable (colección)
         List<String> lista = Arrays.asList(colores);
         System.out.printf("\nArrayList: %s \n", lista);
         imprimirSinDuplicados(lista);

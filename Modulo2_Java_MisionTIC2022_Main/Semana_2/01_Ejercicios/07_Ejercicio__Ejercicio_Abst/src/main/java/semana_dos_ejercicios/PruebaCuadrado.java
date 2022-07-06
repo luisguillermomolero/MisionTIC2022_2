@@ -2,16 +2,14 @@ package semana_dos_ejercicios;
 
 import java.util.Scanner;
 
-public class PruebaCuadrado
-{
-    //Método principal de java
-    public static void main(String[] args)
-    {
-        //Declaración de variables
+public class PruebaCuadrado {
+    // Método principal de java
+    public static void main(String[] args) {
+        // Declaración de variables
         String colorDelCuadrado;
         double ladoDelCuadrado;
 
-        //Se instancia a la variable "Scanner"
+        // Se instancia a la variable "Scanner"
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Introduzca el color del cuadrado: ");

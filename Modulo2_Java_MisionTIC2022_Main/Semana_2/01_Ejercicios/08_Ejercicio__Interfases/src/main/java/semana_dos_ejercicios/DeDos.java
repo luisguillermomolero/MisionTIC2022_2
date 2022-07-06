@@ -1,7 +1,7 @@
 package semana_dos_ejercicios;
 
 class DeDos implements Series {
-    
+
     // atributos
     int iniciar;
     int valor;
