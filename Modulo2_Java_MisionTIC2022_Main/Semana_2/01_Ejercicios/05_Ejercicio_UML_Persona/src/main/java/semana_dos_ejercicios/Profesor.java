@@ -10,6 +10,7 @@ public class Profesor extends Persona {
     public Profesor() {
     }
 
+    // setter
     public void setMateria(String val) {
         this.materia = val;
     }

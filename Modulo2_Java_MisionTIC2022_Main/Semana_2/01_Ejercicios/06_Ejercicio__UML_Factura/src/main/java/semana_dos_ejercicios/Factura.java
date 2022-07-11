@@ -15,7 +15,7 @@ public class Factura extends Comprobante {
 
     public Factura(char t, int n, Fecha f, Cliente cli) {
         super(t, n, f);
-        total = 0F;
+        setTotal(0F);
         setCliente(cli);
     }
 

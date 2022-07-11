@@ -1,5 +1,4 @@
 // Desarrolle un programa que elimine las cadenas duplicadas de un objeto "List", haciendo uso del objeto HashSet.
-
 package semana_dos_ejercicios;
 
 import java.util.List;

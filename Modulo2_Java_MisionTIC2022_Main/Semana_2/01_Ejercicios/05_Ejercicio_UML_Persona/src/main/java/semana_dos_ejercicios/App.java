@@ -38,12 +38,14 @@ public class App {
 
         // objeto estudiante (hijo)
         System.out.println("\n" + "Objeto de la clase Estudiante:");
-        System.out.println("Nombre: " + estudiante.getNombre() + " Carrera: " + estudiante.getCarrera() + " Legajo: "
+        System.out.println("Nombre: " + estudiante.getNombre() + estudiante.getEdad() + " Carrera: "
+                + estudiante.getCarrera() + " Legajo: "
                 + estudiante.getLegajo());
 
         // objeto profesor (hijo)
         System.out.println("\n" + "Objeto de la clase Profesor:");
-        System.out.println("Nombre: " + profesor.getNombre() + " Materia: " + profesor.getMateria() + " Cargo: "
+        System.out.println("Nombre: " + profesor.getNombre() + profesor.getEdad() + " Materia: " + profesor.getMateria()
+                + " Cargo: "
                 + profesor.getCargo());
     }
 }

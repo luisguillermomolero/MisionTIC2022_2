@@ -21,6 +21,7 @@ public class PruebaCuadrado {
         Cuadrado cuadrado1 = new Cuadrado(colorDelCuadrado, ladoDelCuadrado);
 
         System.out.printf("El área del cuadrado %s es: %f", cuadrado1.getColor(), cuadrado1.calcularArea());
+
         sc.close();
     }
 }

@@ -3,9 +3,9 @@ package semana_dos_ejercicios;
 /**
  * Clases abstractas
  * Es la base para crear jerarquias en la que todas las clases comparten una
- * parte de la interfaz
- * Declara la existencia de métodos pero no su implementación (ni {} ni
- * sentencias)
+ * parte de la interfaz.
+ * Declaran la existencia de métodos pero no su implementación (ni {} ni
+ * sentencias).
  * Clase padre (abstracta) define operaciones complejas/repetitivas y funciones
  * para que sus hijas (clases) escriban su código.
  * Se define, pero no es obligatorio que contenga métodos abstractos.

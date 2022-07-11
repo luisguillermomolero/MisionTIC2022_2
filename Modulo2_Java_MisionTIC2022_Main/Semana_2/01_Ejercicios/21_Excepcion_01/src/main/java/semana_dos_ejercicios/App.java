@@ -4,9 +4,10 @@ public class App {
 
     public static void main(String[] args) {
         try {
+            int n = Integer.parseInt("M"); // error forzado en tiempo de ejecución.
             System.out.println("Intentamos ejecutar el bloque de instrucciones:");
             System.out.println("Instrucción 1.");
-            int n = Integer.parseInt("M"); // error forzado en tiempo de ejecución.
+
             System.out.println("Instrucción 2.");
             System.out.println("Instrucción 3, etc.");
         } catch (Exception e) {
