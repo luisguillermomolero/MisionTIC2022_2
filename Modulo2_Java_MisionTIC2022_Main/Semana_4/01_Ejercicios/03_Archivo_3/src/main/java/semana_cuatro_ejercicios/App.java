@@ -8,6 +8,7 @@ public class App {
         
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader entrada = new BufferedReader(isr);
+        // Crea un nuevo PrintWriter a partir de un OutputStream existente.
         PrintWriter  salida = new PrintWriter(System.out, true);
         salida.println("\nEscribe el texto: ");
         try {

@@ -1,6 +1,5 @@
 //Programa que lee enteros por teclado y los escribe en el fichero datos.dat. La lectura de datos acaba cuando se introduce -1.
 
-
 package semana_cuatro_ejercicios;
 
 import java.io.DataOutputStream;
@@ -30,9 +29,9 @@ public class App {
                 n = sc.nextInt();
             }
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } finally {
             try {
                 if (fos != null) {
@@ -42,7 +41,7 @@ public class App {
                     salida.close();
                 }
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                System.err.println(e.getMessage());
             }
             sc.close();
         }

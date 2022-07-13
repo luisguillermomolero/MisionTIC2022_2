@@ -7,7 +7,7 @@ public class App {
         byte[] buffer = new byte[255];
         System.out.println("\nEscribe el texto: ");
         try {
-            System.in.read(buffer, 0, 255);
+            System.in.read(buffer, 0, 255); // instanciar un buffer hasta 255 caracteres
         } catch (IOException e) {
             System.err.println(e);
         }

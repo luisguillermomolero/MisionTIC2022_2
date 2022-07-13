@@ -21,11 +21,11 @@ public class App {
                 System.out.println(n); // se muestra en pantalla
             }
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } catch (EOFException e) {
-            System.out.println("Fin de fichero");
+            System.err.println("Fin de fichero");
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } finally {
             try {
                 if (fis != null) {
