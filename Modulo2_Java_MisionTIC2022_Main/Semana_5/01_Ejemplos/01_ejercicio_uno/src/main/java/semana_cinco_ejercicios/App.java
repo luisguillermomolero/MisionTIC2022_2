@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class App {
     public static void main(String[] args) {
-        JFrame marco = new JFrame();// Creando uns instancia con jframe
+        JFrame marco = new JFrame();// Creando una instancia con jframe
 
         JButton boton = new JButton("Clic");// Creando una instancia con JButton
         boton.setBounds(130, 100, 100, 40);// x axis, y axis, width, height

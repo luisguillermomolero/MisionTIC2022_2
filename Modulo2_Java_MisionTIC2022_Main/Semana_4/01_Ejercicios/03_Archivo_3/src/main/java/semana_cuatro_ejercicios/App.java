@@ -6,9 +6,7 @@ public class App {
     public static void main(String arg[]) {
         String línea = null;
         
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader entrada = new BufferedReader(isr);
-        // Crea un nuevo PrintWriter a partir de un OutputStream existente.
+        BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter  salida = new PrintWriter(System.out, true);
         salida.println("\nEscribe el texto: ");
         try {
