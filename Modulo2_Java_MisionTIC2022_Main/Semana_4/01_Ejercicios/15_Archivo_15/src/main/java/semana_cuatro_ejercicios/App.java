@@ -1,6 +1,5 @@
 //Programa Java que crea una matriz de elementos de tipo double y lee por teclado el valor de sus elementos. A continuación escribe el contenido de la matriz en un fichero. Al principio del fichero se escriben dos enteros con los valores del número de filas y columnas de la matriz.
 
-
 package semana_cuatro_ejercicios;
 
 import java.io.DataOutputStream;
@@ -17,48 +16,48 @@ public class App {
 
         FileOutputStream fos = null;
         DataOutputStream salida = null;
-
         double[][] matriz;
-        int filas, columnas, i, j;
-        do{
+        int filas, columnas;
+
+        do {
             System.out.print("Número de filas: ");
             filas = sc.nextInt();
-        }while(filas <= 0);
-        do{
+        } while (filas <= 0);
+        do {
             System.out.print("Número de columnas: ");
             columnas = sc.nextInt();
-        }while(columnas <= 0);
+        } while (columnas <= 0);
 
-        matriz = new double[filas][columnas]; //se crea la matriz
-       
-        //Lectura de datos por teclado
-        for (i = 0; i < filas; i++) {                                       
-            for (j = 0; j < columnas; j++) {
+        matriz = new double[filas][columnas]; // se crea la matriz
+
+        // Lectura de datos por teclado
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
                 System.out.print("matriz[" + i + "][" + j + "]: ");
                 matriz[i][j] = sc.nextDouble();
             }
         }
         try {
-            //crear el fichero de salida
+            // crear el fichero de salida
             fos = new FileOutputStream("matriz.dat");
-            
-            //Procesar datos de salida
+
+            // Procesar datos de salida
             salida = new DataOutputStream(fos);
 
-            //escribir el número de filas y columnas en el fichero                                                
+            // escribir el número de filas y columnas en el fichero
             salida.writeInt(filas);
             salida.writeInt(columnas);
-           
-           //escribir la matriz en el fichero
-            for (i = 0; i < filas; i++) {
-                for (j = 0; j < columnas; j++) {
+
+            // escribir la matriz en el fichero
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
                     salida.writeDouble(matriz[i][j]);
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println(e.getMessage());                                                                   
+            System.err.println(e.getMessage());
         } finally {
             try {
                 if (fos != null) {

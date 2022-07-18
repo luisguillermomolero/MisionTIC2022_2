@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class App {
-    public static void main(String[] args) throws Exception{
-        int[][] numeros = { { 1, 2, 3, 4, 5 },{ 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 },{ 16, 17, 18, 19, 20 },{ 21, 22, 23, 24, 25 } };
-        try{
+    public static void main(String[] args) throws Exception {
+        int[][] numeros = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, { 16, 17, 18, 19, 20 },
+                { 21, 22, 23, 24, 25 } };
+        try {
             File archivo = new File("Numeros.txt");
             PrintWriter salida = new PrintWriter(archivo);
             for (int i = 0; i < numeros.length; i++) {
@@ -19,7 +20,7 @@ public class App {
             System.out.println("Archivo escrito");
             salida.close();
         } catch (IOException e) {
-            System.out.println("Ocurrio un ERROR.");
+            System.err.println("Ocurrio un ERROR.");
             e.printStackTrace();
         }
     }

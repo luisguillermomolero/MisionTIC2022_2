@@ -30,13 +30,10 @@ public class Persona implements Serializable {
     }
 
     public static void main(String[] args) {
-        
-        
-        //FileReader fr = new FileReader ("Objeto.dat");
-        //BufferedReader fd = new BufferedReader (fr);
+
         File nombre = new File("Objeto.dat");
 
-        try{
+        try {
             FileInputStream archivo = new FileInputStream(nombre);
             ObjectInputStream ois = new ObjectInputStream(archivo);
             Persona p1 = (Persona) ois.readObject();
@@ -45,12 +42,13 @@ public class Persona implements Serializable {
             System.out.println("Cedula\t Nombre");
             System.out.println(p1.getAtributos());
             System.out.println(p2.getAtributos());
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("¡El fichero no existe!");
-        }catch(IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
-        };
+        }
+        ;
     }
 }

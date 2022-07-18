@@ -46,11 +46,11 @@ public class InputUtilities {
         return value;
     }
 
-    public static void waitForEnter(BufferedReader input) throws IOException{
+    public static void waitForEnter(BufferedReader input) throws IOException {
         waitForEnter(input, "\nPresione ENTER para continuar");
     }
 
-    public static void waitForEnter(BufferedReader input, String message) throws IOException{
+    public static void waitForEnter(BufferedReader input, String message) throws IOException {
         System.out.println(message);
         input.readLine();
 

@@ -15,14 +15,13 @@ public class App {
         Scanner sc = new Scanner(System.in);
         FileOutputStream fos = null;
         DataOutputStream salida = null;
-        int n;
 
         try {
             fos = new FileOutputStream("datos.dat");
             salida = new DataOutputStream(fos);
 
             System.out.print("Introduce número entero. -1 para acabar: ");
-            n = sc.nextInt();
+            int n = sc.nextInt();
             while (n != -1) {
                 salida.writeInt(n); // se escribe el número entero en el fichero
                 System.out.print("Introduce número entero. -1 para acabar: ");

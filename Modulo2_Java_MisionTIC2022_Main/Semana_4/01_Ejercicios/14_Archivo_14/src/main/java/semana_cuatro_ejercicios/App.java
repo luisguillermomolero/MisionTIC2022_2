@@ -12,12 +12,12 @@ public class App {
     public static void main(String[] args) {
         FileInputStream fis = null;
         DataInputStream entrada = null;
-        int n;
+
         try {
             fis = new FileInputStream("datos.dat");
             entrada = new DataInputStream(fis);
             while (true) {
-                n = entrada.readInt(); // se lee un entero del fichero
+                int n = entrada.readInt(); // se lee un entero del fichero
                 System.out.println(n); // se muestra en pantalla
             }
         } catch (FileNotFoundException e) {
