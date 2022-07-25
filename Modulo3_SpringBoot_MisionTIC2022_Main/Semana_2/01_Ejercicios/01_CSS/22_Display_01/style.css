@@ -1,0 +1,49 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px;
+}
+.hijo_A {
+  background: orange;
+  text-align: center;
+  border: rgb(241, 202, 129) 3px solid;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+.hijo_B {
+  background: violet;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_C {
+  background: yellowgreen;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_D {
+  background: red;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_E {
+  background: paleturquoise;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_F {
+  background: lightslategrey;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_G {
+  background: lightcoral;
+  text-align: center;
+  border: black 5px solid;
+}
+.hijo_H {
+  background: limegreen;
+  text-align: center;
+  border: black 5px solid;
+}

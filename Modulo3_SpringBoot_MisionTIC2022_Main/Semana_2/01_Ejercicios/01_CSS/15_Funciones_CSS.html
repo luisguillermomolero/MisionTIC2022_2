@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funciones CSS</title>
+  <style>
+    .elemento1 {
+      width: calc(200px + 1em);
+      height: 300px;
+      background: blue;
+    }
+
+    .elemento2 {
+      width: min(200px, 25%);
+      height: 200px;
+      background: red;
+    }
+
+    .elemento3 {
+      width: max(200px - 100px, 25%, 14vw);
+      height: 200px;
+      background: rebeccapurple;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="elemento1" data-author="Manz"></div>
+  <style>
+    .elemento1::before {
+      content: attr(data-author);
+      font-size: 22px;
+      color: lightcoral;
+    }
+  </style>
+</body>
+</head>
+
+</html>

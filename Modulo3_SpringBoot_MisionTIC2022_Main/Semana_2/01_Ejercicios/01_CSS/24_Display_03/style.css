@@ -1,0 +1,30 @@
+@media screen and (min-width: 480px) {
+  nav ul {
+    display: flex;
+  }
+} 
+nav {
+  padding: 1em;
+  font-family: font-family: Verdana, Geneva, sans-serif;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: purple;
+}
+nav li{
+  flex-grow:1;
+  text-align:center;
+}
+nav li a {
+  color: white;
+  display: block;
+  padding: .5em 1em;
+  flex-grow:1;
+  text-align:center;
+}
+nav li a:hover {
+  background: tomato;
+  color: white;
+}

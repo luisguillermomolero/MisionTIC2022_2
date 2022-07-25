@@ -1,0 +1,29 @@
+/*
+Especificidad
+Peso de los estilos cuando hay conflicto de estilos
+Etiqueta = 1
+Clases y pseudo clases = 10
+ID = 100
+Estilos en línea = 1000
+!important = sobre escribe cualquiera anterior
+*/
+
+/*style.css*/
+#parrafo {
+  color: aquamarine;
+}
+.parrafo {
+  color: red;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  color: green !important;
+}
+
+.parrafo-2 {
+  color: purple;
+}

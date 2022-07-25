@@ -1,0 +1,46 @@
+/*
+Selector de hermano adyacente: selecciona a un hermano justo debajo
+*/
+h1 + h2{
+    color: red;
+}
+/*
+Selector de hermano general: buscar todos los hermanos que compartan el mismo padre
+*/
+h1 ~ h3{
+    color: aqua;
+}
+/*
+Selectores descendentes: Aplica el estilo a todos los elementos que sean hijos
+*/
+div span{
+    color: brown;
+}
+/*
+Selector de hijo directo: Se aplica al hijo directo del elemento seleccionado, el hijo directo es el que está en nivel 1 descendente:
+*/
+p > span{
+    color: aquamarine;
+}
+/*
+Herencia: Se obliga a un elemento a heredar la propiedad de su elemento cercano.
+*/
+p{
+    color: red;
+}
+a{
+    color: inherit;
+}
+/*
+Cascada: La manera como se leen las hojas de estilos y la forma en cómo se sobrescriben los estilos a medida que se baja en el documento.
+*/
+p{
+    color: red;
+}
+a{
+    color: inherit;
+}
+
+p{
+    color: aqua;
+}

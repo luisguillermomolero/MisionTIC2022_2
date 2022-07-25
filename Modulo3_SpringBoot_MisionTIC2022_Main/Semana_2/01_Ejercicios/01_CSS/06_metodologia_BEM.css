@@ -1,0 +1,45 @@
+/*
+Metodología BEM - Block, Elemento y Modifier
+Es una forma de estructurar clases CSS de forma sencilla, escalable y reutilizable, es una de las
+metodologías más utilizadas en el mundo.
+
+- Un bloque (Block) es cualquier elemento autónomo y aislado del documento HTML, puede ser un menú,
+una galería, un formulario, una sección. Se nombra con una palabra o una palabra seguida de un guión
+medio
+
+Ejemplo:
+
+.menu
+.menu-principal
+
+Un elemento (Element) es cada uno de los elementos del bloque, en un menú es un enlace, en una
+galería es una foto, en un formulario es un campo de texto o botón, en una sección puede ser el título.
+Se nombra con el bloque al que pertenece seguido de dos guiones bajos y el nombre del elemento
+
+Ejemplo:
+
+.menu_item
+.menu-principal__link
+
+Un modificador (modifier) es cuando un bloque se repite en algún otro lugar de la web pero con
+modificación como color de texto, tamaño de la fuente, decoración.
+Se nombra con el nombre del elemento seguido de dos guiones medios y el nombre del modificador
+
+Ejemplo:
+
+.menu__item--active
+.menu-principal__link--big
+
+Box-Model
+En la web todos los elementos se pueden representar como cajas, una manera de verlo es inspeccionando
+el código, lo que se resalta al momento de pararse sobre un elemento es un rectángulo, esta forma en la
+que el navegador dibuja estas cajas se llama el LAYOUT, que hace referencia a la geometría de la web, la
+posición de un elemento con respecto a las propiedades principales de cada caja es el ancho (width) y el
+alto (height).
+
+Ejemplo:
+
+.Caja-1{
+    margin: 1em; /*se aplica a todos los bordes
+    padding: 10px;
+*/

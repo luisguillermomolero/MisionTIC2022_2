@@ -1,0 +1,17 @@
+/*
+Se aplica a todas las etiquetas de este tipo
+*/
+p {
+  color: red;
+  background-color: blue;
+  font-family: Cambria;
+  font-size: xx-large;
+  font-style: italic;
+  font-weight: bolder;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-style: oblique;
+}

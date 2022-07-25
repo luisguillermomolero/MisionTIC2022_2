@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+}
+
+.contenido {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: blue;
+  font-size: 12px;
+}
+
+.contenido {
+  font-size: 80%;
+}
+
+p {
+  line-height: 1.5;
+}
+
+p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+  text-align: left;
+  text-align: right;
+  text-align: justify;
+}

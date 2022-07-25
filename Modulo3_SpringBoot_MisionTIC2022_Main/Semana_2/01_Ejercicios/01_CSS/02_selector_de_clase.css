@@ -1,0 +1,9 @@
+/*
+Selectores de las clases que se asignan a los elementos de HTML
+*/
+.title{
+    color: blue;
+}
+.text{
+    font-size: 12px;
+}
