@@ -1,29 +1,31 @@
-/* Swing - JButton 
- * Problema: Confeccionar una ventana que muestre un botÛn. 
- * Cuando se presione finalizar la ejecuciÛn del programa Java.
-*/ 
-
 import javax.swing.*;
 import java.awt.event.*;
+
 public class Formulario extends JFrame implements ActionListener {
-    JButton boton1;
+
+    JButton BotonFinalizar;
+
     public Formulario() {
         setLayout(null);
-        boton1=new JButton("Finalizar");
-        boton1.setBounds(300,250,100,30);
-        add(boton1);
-        boton1.addActionListener(this);
+
+        // instanciar componente bot√≥n
+        BotonFinalizar = new JButton("Finalizar");
+        BotonFinalizar.setBounds(300, 250, 100, 30);
+        // listener del bot√≥n
+        BotonFinalizar.addActionListener(this);
+        // agregando el bot√≥n al jframe
+        add(BotonFinalizar);
     }
-    
+
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==boton1) {
+        if (e.getSource() == BotonFinalizar) {
             System.exit(0);
         }
     }
-    
+
     public static void main(String[] ar) {
-        Formulario formulario1=new Formulario();
-        formulario1.setBounds(0,0,450,350);
+        Formulario formulario1 = new Formulario();
+        formulario1.setBounds(0, 0, 450, 350);
         formulario1.setVisible(true);
         formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
