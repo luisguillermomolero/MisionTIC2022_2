@@ -12,12 +12,15 @@ public class Formulario extends JFrame implements ActionListener {
         // componente etiqueta
         Etiqueta = new JLabel("Usuario:");
         Etiqueta.setBounds(10, 10, 100, 30);
+
         // componente CampoTexto
         CampoTexto = new JTextField();
         CampoTexto.setBounds(120, 10, 150, 20);
+
         // componente botón
         BotonAceptar = new JButton("Aceptar");
         BotonAceptar.setBounds(10, 80, 100, 30);
+
         // listener del boton
         BotonAceptar.addActionListener(this);
 
@@ -25,7 +28,6 @@ public class Formulario extends JFrame implements ActionListener {
         add(Etiqueta);
         add(CampoTexto);
         add(BotonAceptar);
-
     }
 
     public void actionPerformed(ActionEvent e) {

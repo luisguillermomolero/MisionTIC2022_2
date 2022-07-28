@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Formulario extends JFrame implements ActionListener {
     private JMenuBar BarraMenus;
-    private JMenu MenuOpciones;
+    private JMenu MenuOpciones, MenuArchivo;
     private JMenuItem MenuOpcionRojo, MenuOpcionVerde, MenuOpcionAzul;
 
     public Formulario() {
@@ -15,6 +15,7 @@ public class Formulario extends JFrame implements ActionListener {
         // barra de menus
         BarraMenus = new JMenuBar();
         MenuOpciones = new JMenu("Opciones");
+        MenuArchivo = new JMenu("Archivo");
 
         // opciones del menú "opciones"
         MenuOpcionRojo = new JMenuItem("Rojo");
@@ -31,6 +32,7 @@ public class Formulario extends JFrame implements ActionListener {
 
         // Agregando el menú "Opciones" al menuBar
         BarraMenus.add(MenuOpciones);
+        BarraMenus.add(MenuArchivo);
 
         // Agregando las opciones del menú "Opciones"
         MenuOpciones.add(MenuOpcionRojo);
