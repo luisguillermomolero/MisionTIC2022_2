@@ -1,0 +1,40 @@
+/*
+Se aplica a todos los elementos de un documento "no se recomienda su uso"
+*/
+*{
+    color: green;
+}
+/*
+Selectores de atributos: Se selecciona a través de un atributo como href
+*/
+[href]{
+    color: greenyellow;
+}
+/*
+Selector de atributo-valor
+*/
+[href=1]{
+    color: greenyellow;
+}
+
+[class="text"]{
+    color: blueviolet;
+}
+/*
+Para un atributo que inicie con un valor indicado
+*/
+[class ^="title"]{
+    font-size: 60px;
+}
+/*
+Para un atributo que finalice con un valor indicado
+*/
+[class $="text"]{
+    font-size: 12px;
+}
+/*
+Para un atributo que contenga el valor
+*/
+[class *="title"]{
+    color: yellowgreen;
+}

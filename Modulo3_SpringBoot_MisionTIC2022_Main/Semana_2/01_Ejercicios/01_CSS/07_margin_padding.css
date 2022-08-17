@@ -1,0 +1,68 @@
+/*
+margin: separacion entre bloques
+padding: separacion entre una caja y su borde
+*/
+[ class *=box]{
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+}
+
+.box1{
+    background: yellowgreen;
+    border: 5px solid red;
+    border-top-width: 200px;
+    border-top-color: transparent;
+}
+
+.box2{
+    background: lightseagreen;
+    border: 5px;
+    border-left-style: dotted;
+    border-left-color: blue;
+}
+
+.box3{
+    background: lightcoral;
+    border: 5px dashed blue;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    position: relative;
+}
+
+[ class^=box]{
+    width: 50px;
+    height: 50px;
+}
+
+.box2{
+    border: 4px solid blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box3{
+    border: 4px solid green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.box4{
+    border: 4px solid lightgreen;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.box5{
+    border: 4px solid darkorange;
+    position: absolute;
+}

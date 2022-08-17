@@ -1,0 +1,13 @@
+.nav-enlace {
+  display: inline-block;
+  background: salmon;
+  color: white;
+  padding: 10px 30px;
+}
+.nav-enlace:hover {
+  background: rgb(95, 207, 91);
+}
+nav {
+  background: rebeccapurple;
+  padding: 10px;
+}

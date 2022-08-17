@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-areas: "hijoA hijoB hijoC hijoD";
+}
+.hijo_A {
+  background: orange;
+  grid-area: hijoA;
+  text-align: center;
+}
+.hijo_B {
+  background: violet;
+  grid-area: hijoB;
+  text-align: center;
+}
+.hijo_C {
+  background: yellowgreen;
+  grid-area: hijoC;
+  text-align: center;
+}
+.hijo_D {
+  background: red;
+  grid-area: hijoD;
+  text-align: center;
+}

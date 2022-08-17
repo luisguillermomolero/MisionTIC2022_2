@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso de CSS para estilos</title>
+    <style>
+      /* propiedad font-weight */
+      p.ligero {
+        font-weight: lighter;
+      }
+      p.normal {
+        font-weight: normal;
+      }
+      p.negrilla {
+        font-weight: bold;
+      }
+      p.pesado {
+        font-weight: bolder;
+      }
+
+      /* propiedad font-variant normal, small-caps, initial, inherit*/
+      p.normalVariante {
+        font-variant: normal;
+      }
+      p.pequena {
+        font-variant: small-caps;
+      }
+
+      /* propiedad color de fuente */
+      p.red {
+        color: red;
+      }
+      p.blue {
+        color: blue;
+      }
+      p.green {
+        color: green;
+      }
+      p.yellow {
+        color: yellow;
+      }
+
+      /* propiedad alineación de texto*/
+      p.left {
+        text-align: left;
+      }
+      p.right {
+        text-align: right;
+      }
+      p.center {
+        text-align: center;
+      }
+      p.justify {
+        text-align: justify;
+      }
+
+      /* propiedad alineación de texto vertical*/
+      td.arriba {
+        vertical-align: top;
+      }
+      td.medio {
+        vertical-align: middle;
+      }
+      td.abajo {
+        vertical-align: bottom;
+      }
+
+      /* propiedad alineación de elementos en línea*/
+      span.baseline {
+        vertical-align: baseline;
+      }
+      span.sub {
+        vertical-align: sub;
+      }
+      span.super {
+        vertical-align: super;
+      }
+      span.pix {
+        vertical-align: -30px;
+      }
+
+      /*Estilo para bloque de texto*/
+      .bloque {
+        height: 200px;
+        width: 300px;
+        background-color: red;
+        display: inline-table;
+      }
+      .tex {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      /* Valores para text-decoration en CSS */
+      p.none {
+        text-decoration: none;
+      }
+      p.inherit {
+        text-decoration: inherit;
+      }
+      p.overline {
+        text-decoration: overline;
+      }
+      p.through {
+        text-decoration: line-through;
+      }
+      p.underline {
+        text-decoration: underline;
+      }
+
+      /*propiedad text-shadow*/
+      h3 {
+        text-shadow: 7px 4px 5px blue;
+      }
+    </style>
+  </head>
+  <body>
+    /* propiedad font-weight */
+
+    <p class="ligero">Este es un parrafo con font weight ligero</p>
+    <p class="normal">Este es un parrafo con font weight normal</p>
+    <p class="negrilla">Este es un parrafo con font weight negrilla</p>
+    <p class="pesado">Este es un parrafo con font weight pesado</p>
+    <br />
+
+    /* propiedad font-variant */
+
+    <p class="normalVariante">Este es un parrafo con font-variant normal</p>
+    <p class="pequena">Este es un parrafo con font-variant small-caps</p>
+    <br />
+
+    /* propiedad color de fuente */
+
+    <p class="red">Este es un parrafo con color rojo</p>
+    <p class="blue">Este es un parrafo con color azul</p>
+    <p class="green">Este es un parrafo con color verde</p>
+    <p class="yellow">Este es un parrafo con color amarillo</p>
+    <br />
+
+    /* propiedad alineación de texto*/
+
+    <p class="left">Este es un parrafo alineado a la izquierda</p>
+    <p class="right">Este es un parrafo alineado a la derecha</p>
+    <p class="center">Este es un parrafo alineado al centro</p>
+    <p class="justify">Este es un parrafo Justificado</p>
+    <br />
+
+    /* propiedad alineación de texto vertical*/
+
+    <table border="1" cellpadding="2" cellspacing="0" style="height: 200px">
+      <tr>
+        <td class="arriba">Texto arriba</td>
+        <td class="medio">Texto al medio</td>
+        <td class="abajo">Texto abajo</td>
+      </tr>
+    </table>
+    <br />
+
+    /* propiedad alineación de elementos en línea*/
+
+    <p>1 elemento <span class="baseline"> en baseline </span> ejemplo</p>
+    <p>2 elemento<span class="sub">en sub</span> ejemplo</p>
+    <p>3 elemento<span class="super">en super</span> ejemplo</p>
+    <p>4 elemento<span class="pix">en pixel</span> ejemplo</p>
+    <br />
+
+    /*Estilo para bloque de texto*/
+
+    <br />
+    <div class="bloque">
+      <div class="tex">
+        Esto es un texto dentro de un contenedor div con nombre "main" y será
+        alineado al medio verticalmente
+      </div>
+    </div>
+    <br />
+
+    /* Valores para text-decoration en CSS */
+
+    <p class="none">Este es un texto sin decoración (subrayado)</p>
+    <p class="inherit">Este es un texto con decoración (subrayado) heredada</p>
+    <p class="overline">Este es un texto con decoración (subrayado) encima</p>
+    <p class="through">Este es un texto con decoración (subrayado) al medio</p>
+    <p class="underline">Este es un texto con decoración (subrayado) debajo</p>
+
+    /*propiedad text-shadow*/
+
+    <br />
+    <h3>Título del tercer nivel</h3>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
