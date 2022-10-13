@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="ejemplo">Primer elemento div con class="example".</div>
+    <div class="ejemplo">Segundo elemento div con class="example".</div>
+    <p>
+      Haga clic en el botón para cambiar el texto del primer elemento div con
+      class="ejemplo" (índice 0).
+    </p>
+    <button onclick="myFunction()">Intenta</button>
+    <script>
+      function myFunction() {
+        var cambiar = document.getElementsByClassName("ejemplo");
+        cambiar[0].innerHTML = "¡¡¡SORPRESA!!!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script languaje="javascript">
+      var salida = "";
+      for (x = 5; x < 15; x++) {
+        if (x == 8) break;
+        salida = salida + x + "\n";
+      }
+      salida = salida + x + "\n\n";
+      for (x = 5; x < 15; x++) {
+        if (x == 8) continue;
+        salida = salida + x + "\n";
+      }
+      alert(salida);
+    </script>
+  </body>
+</html>

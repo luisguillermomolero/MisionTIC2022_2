@@ -20,6 +20,7 @@ const { nombre, edad } = Persona2;
 console.log(nombre);
 console.log(edad);
 //Se imprime la instancia de "hijo"
+
 const { nombreHijo } = Persona2.hijo;
 console.log(nombreHijo);
 
@@ -59,7 +60,7 @@ console.log(
 //Ejercicio Destructuring - Realizado por: Brandon Motta - Grupo Web 4A
 
 //Objeto teléfono
-const telefono = {
+const telefono1 = {
   marca: "Xiaomi",
   modelo: "Redmi Note 7",
   color: "Negro",

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script languaje="javascript">
+      while (opcion != 1) {
+        var numero = parseFloat(prompt("Ingrese un número por favor: "));
+
+        if (numero > 0) {
+          alert("El número es positivo");
+        }
+        if (numero < 0) {
+          alert("El número es negativo");
+        }
+
+        var opcion = parseFloat(prompt("Salir = 1 "));
+        if (opcion == 1) {
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

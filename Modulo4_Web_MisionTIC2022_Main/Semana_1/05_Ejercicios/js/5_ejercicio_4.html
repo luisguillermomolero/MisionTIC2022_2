@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <title>js y bootstrap</title>
+  </head>
+
+  <body>
+    <!--<label id="etiquetaMostrarArea"></label>-->
+
+    <div class="card">
+      <div class="card-body">
+        <p>
+          El área de una circunferencia es:
+          <span id="etiquetaMostrarArea"></span>
+        </p>
+      </div>
+    </div>
+
+    <script languaje="JavaScript">
+      var pi = 3.141592;
+      var radio = 7;
+      var area = pi * (radio * radio);
+      //alert("área de una circunferencia: " + area);
+      //JavaScript HTML DOM
+      document.getElementById("etiquetaMostrarArea").innerHTML = area;
+    </script>
+  </body>
+</html>

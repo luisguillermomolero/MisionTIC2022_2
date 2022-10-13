@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="formulario">
+      <form method="post" id="formdata">
+        <div class="form-group col-sm-5 mt-3 m-lg-3 mb-3">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            id="nombre"
+            required="required"
+          />
+          <small id="nombrelHelp" class="form-text text-muted"
+            >Digite nombre empleado
+          </small>
+        </div>
+
+        <div id="exito" style="display: none">
+          <p>Sus datos han sido recibidos con éxito</p>
+        </div>
+
+        <div id="fracaso" style="display: none">
+          <p>Se ha producido un error durante el envío de los datos</p>
+        </div>
+
+        <div class="form-group col-sm-5 mt-3 m-lg-3 mb-3">
+          <input
+            type="button"
+            class="btn btn-success"
+            id="botonIngresar"
+            value="Ingresar"
+          />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validaNombre() {
+        if ($("#nombre").val() == "") {
+          alert("El campo nombre no puede estar vacio");
+          $("#nombre").focus();
+          return false;
+        }
+        return true;
+      }
+      $(document).ready(function () {
+        $("#botonIngresar").click(function () {
+          if (validaNombre()) {
+            $("#fracaso").hide();
+            $("#exito").delay(500).fadeIn("slow");
+          } else {
+            $("#exito").hide();
+            $("#fracaso").delay(500).fadeIn("slow");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

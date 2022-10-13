@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script languaje="javascript">
+      var texto = prompt("Escriba un texto");
+      var veces = parseFloat(
+        prompt("Ingrese el número de veces a repetir el texto")
+      );
+      var frase = "";
+      for (var n = 1; n <= veces; n++) {
+        frase += "Texto " + texto + ". Repetición # " + n + "<br>";
+      }
+      document.writeln(frase);
+    </script>
+  </body>
+</html>

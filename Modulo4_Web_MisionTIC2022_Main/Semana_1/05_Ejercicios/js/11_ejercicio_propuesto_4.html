@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nombre = prompt("Ingrese su nombre por favor: ");
+      var veces = parseFloat(
+        prompt("Ingrese el número de veces a repetir su nombre")
+      );
+      var frase = "";
+      var n = 1;
+      while (n <= veces) {
+        frase += "Tu nombre es " + nombre + ". Repetición # " + n + "<br>";
+        n++;
+      }
+      document.writeln(frase);
+    </script>
+  </body>
+</html>
